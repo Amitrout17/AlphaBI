@@ -2,17 +2,22 @@
 import axios from "axios";
 import React, { useState } from "react";
 import "../app/HomePage.css";
+
+import Loader from "../app/Loader";
 function page() {
   const [key, setkey] = useState("");
   const [apiData, setapiData] = useState("");
+  const [loader, setloader] = useState(false);
 
   const getData = async () => {
+    setloader(true)
     await axios
       .get(
         `https://api.giphy.com/v1/gifs/search?api_key=IMqITPeQcSFeNFqKASS3JJKSSIpeW91S&q=${key}&limit=3&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
       )
       .then((res) => {
         console.log(res);
+        setloader(false)
         setapiData(res.data.data);
       })
       .catch((err) => {
@@ -25,7 +30,7 @@ function page() {
       <div className="SearchDiv">
         <input
           type="text"
-          placeholder="Search Keyword or placename"
+          placeholder="Search Keyword or Place Name"
           onChange={(e) => {
             setkey(e.target.value);
           }}
@@ -38,6 +43,8 @@ function page() {
           search
         </button>
       </div>
+
+      {loader && <Loader />}
 
       <div className="div-img">
         {apiData &&
@@ -61,19 +68,21 @@ function page() {
             </>
           ))}
       </div>
-      <div className="pagination-div">
-        <div
-          onClick={() => {
-            console.log("hi");
-          }}
-        >
-          Previous
+      {apiData && (
+        <div className="pagination-div">
+          <div
+            onClick={() => {
+              console.log("hi");
+            }}
+          >
+            Previous
+          </div>
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>Next</div>
         </div>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>Next</div>
-      </div>
+      )}
     </div>
   );
 }

@@ -102,16 +102,8 @@
     border: 15px #fce5ee;
 }
 
-/* .pagination-div{
-    margin-top: 20px;
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.manual-loader-container {
     background-color: white;
-    text-align: center;
+    margin: 0;
+    padding: 0;
 }
-
-.pagination-div div{
-    background-color: white;
-} */
