@@ -1,0 +1,117 @@
+* {
+    background-color: #e8eaee;
+
+}
+
+.div-main {
+    margin-top: 50px;
+    margin-right: 250px;
+    margin-left: 250px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.div-img img {
+    border: 10px;
+}
+
+.div-img-2 {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+
+.div-img-2 p {
+    background-color: white;
+}
+
+.div-img-2 h4 {
+    background-color: white;
+}
+
+.div-img div {
+    border-radius: 10px 10px 10px 10px;
+    margin-right: 10px;
+}
+
+.div-img {
+    background-color: white;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.SearchDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.SearchDiv input {
+    width: 100%;
+    border: 3px;
+    text-align: left;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f2f4f8;
+    color: black;
+    height: 35px;
+}
+
+
+.SearchDiv button {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.pagination-div {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    /* Adjust the margin as needed */
+}
+
+/* Add the following styles for better appearance */
+.pagination-div>div {
+    padding: 8px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+}
+
+
+.pagination-div :hover {
+    background-color: #fce5ee;
+    border: 15px #fce5ee;
+}
+
+/* .pagination-div{
+    margin-top: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    text-align: center;
+}
+
+.pagination-div div{
+    background-color: white;
+} */
