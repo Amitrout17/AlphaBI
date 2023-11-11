@@ -39,6 +39,7 @@ export default function Home() {
         password
       );
       alert("Registration successful");
+      sessionStorage.setItem("login", "true");
       router.push("/login");
       console.log("Registration successful:", user);
     } catch (error) {

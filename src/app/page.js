@@ -14,23 +14,28 @@ function page() {
   const [offset, setoffset] = useState(0);
 
   const getData = async () => {
-    setloader(true);
-    setapiData("")
-    setoffset(0);
-    setcurrentPage(1)
-    await axios
-      .get(
-        `https://api.giphy.com/v1/gifs/search?api_key=IMqITPeQcSFeNFqKASS3JJKSSIpeW91S&q=${key}&limit=3&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
-      )
-      .then((res) => {
-        console.log(res);
-        setloader(false);
-        setapiData(res.data.data);
-      })
-      .catch((err) => {
-        console.log(err);
-        alert("Some error occured in fetching data");
-      });
+    const login = sessionStorage.getItem("login");
+    if (login === "true") {
+      setloader(true);
+      setapiData("");
+      setoffset(0);
+      setcurrentPage(1);
+      await axios
+        .get(
+          `https://api.giphy.com/v1/gifs/search?api_key=IMqITPeQcSFeNFqKASS3JJKSSIpeW91S&q=${key}&limit=3&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
+        )
+        .then((res) => {
+          console.log(res);
+          setloader(false);
+          setapiData(res.data.data);
+        })
+        .catch((err) => {
+          console.log(err);
+          alert("Some error occured in fetching data");
+        });
+    } else {
+      alert("Login to search GIFs");
+    }
   };
 
   const nextPage = async () => {

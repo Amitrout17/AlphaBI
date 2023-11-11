@@ -39,6 +39,7 @@ export default function Home() {
       const auth = getAuth();
       const { user } = await signInWithEmailAndPassword(auth, email, password);
       console.log(user);
+      sessionStorage.setItem("login", "true");
       alert("Login Successfully");
       router.push("/");
     } catch (error) {
