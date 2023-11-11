@@ -1,0 +1,24 @@
+.Navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+  }
+  
+  .Navbar li a{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: black;
+  }
+  
+  .Navbar li:hover {
+    text-decoration: underline;
+  }
+  
