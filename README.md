@@ -19,4 +19,4 @@ This project is a simple GIF search functionality built using Next.js and Fireba
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/nextjs-gif-search.git
+   git clone https://github.com/Amitrout17/GIFI-Search
